@@ -1,0 +1,51 @@
+body{
+    background-color: black;
+    color: orange;
+    text-align: center;
+}
+
+.mine{
+    display: inline-block;
+    width: 9vw;
+    height: 8vh;
+    margin: 2px;
+    background-color: orange;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+    border: none;
+}
+
+.mine:hover{
+    background-color: red;
+    border-radius: 7px;;
+}
+
+.mine-container{
+    margin-top: 10px;
+}
+
+#GameOver{
+    font-size: 2em;
+    display: none;
+    margin: 10px;
+}
+
+#newgame{
+    display: inline-block;
+    width: 50vw;
+    height: 7vh;
+    margin: 2px;
+    background-color: orange;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 20px;
+    border: none;
+}
+
+#newgame:hover{
+    background-color: red;
+    border-radius: 7px;;
+}
