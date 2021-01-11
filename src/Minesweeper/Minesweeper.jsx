@@ -61,10 +61,19 @@ export default class Minesweeper extends React.Component
             st.style.borderRadius='15px';
             const c=document.getElementById('GameOver');
             c.style.display='block';
+            const con=document.getElementById('Game');
+            con.style.display='none';
         }
         else
         {
             score[0]+=1;
+            if(score[0]===80)
+            {
+                const w=document.getElementById('Winner');
+                w.style.display='block';
+                const con=document.getElementById('Game');
+                con.style.display='none';
+            }
             this.setState({array,tiles,score});
             const t=document.getElementsByClassName('mine');
             const st=t[idx];
@@ -139,18 +148,42 @@ export default class Minesweeper extends React.Component
         const {array,tiles,score}=this.state;
         return(
             <div className="mine-container">
-                <div id="GameOver">{'OOPS:( GAME OVER'}
+                <div id="GameOver">
+                <br></br>
+                <br></br>
+                <br></br>
+                {'OOPS:( GAME OVER'}
+                <br></br>
+                <br></br>
                 <br></br>
                 Score : {score[0]}
                 <br></br>
+                <br></br>
+                <br></br>
                 <button id="newgame" onClick={()=>NG()}>NEW GAME</button>
                 <br></br></div>
+                <div id="Winner">
+                <br></br>
+                <br></br>
+                <br></br>
+                {'CONGRATS:) YOU HAVE WON THE GAME!!'}
+                <br></br>
+                <br></br>
+                <br></br>
+                Score : 80
+                <br></br>
+                <br></br>
+                <br></br>
+                <button id="newgame" onClick={()=>NG()}>NEW GAME</button>
+                <br></br></div>
+                <div id="Game">
                 {tiles.map((value,idx)=>(
                 <button className="mine" key={idx} onClick={()=>this.process(idx)}>{value}
                 </button>))}
                 <br></br>
                 <br></br>
                 <div id="Score">Score : {score[0]}</div>
+                </div>
             </div>
         );
     }

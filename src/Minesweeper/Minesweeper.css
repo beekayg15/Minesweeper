@@ -27,6 +27,14 @@ body{
 }
 
 #GameOver{
+    color: red;
+    font-size: 2em;
+    display: none;
+    margin: 10px;
+}
+
+#Winner{
+    color: green;
     font-size: 2em;
     display: none;
     margin: 10px;
