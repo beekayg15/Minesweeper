@@ -24,7 +24,7 @@ export default class Minesweeper extends React.Component
         {
             tiles.push('TRY ME:)');
         }
-        var i=20;
+        var i=15;
         while(i>0)
         {
             var x=randomin(0,99);
@@ -67,7 +67,7 @@ export default class Minesweeper extends React.Component
         else
         {
             score[0]+=1;
-            if(score[0]===80)
+            if(score[0]===85)
             {
                 const w=document.getElementById('Winner');
                 w.style.display='block';
@@ -170,7 +170,7 @@ export default class Minesweeper extends React.Component
                 <br></br>
                 <br></br>
                 <br></br>
-                Score : 80
+                Score : 85
                 <br></br>
                 <br></br>
                 <br></br>
