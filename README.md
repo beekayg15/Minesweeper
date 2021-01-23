@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Minesweeper
+Page Deployment Link: https://barathkumarbk-15.github.io/Minesweeper
+***
+An **interactive webpage** that recreates of the primitive **Minesweeper game of Microsoft**, created using `HTML`, `CSS`, `JavaScript`, `NodeJS` and `React`.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tools and Languages Used :
+<p>
+<img width="45" height="45" hspace="10" src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg"/>
+<img width="48" height="48" hspace="10" src="https://cdn.worldvectorlogo.com/logos/html5-1.svg"/>
+<img width="48" height="48" hspace="10" src="https://cdn.worldvectorlogo.com/logos/css-5.svg"/>
+<img width="45" height="45" hspace="10" src="https://cdn.worldvectorlogo.com/logos/javascript-2.svg"/>
+<img width="45" height="45" hspace="10" src="https://cdn.worldvectorlogo.com/logos/react-2.svg"/>
+<img width="45" height="45" hspace="10" src="https://cdn.worldvectorlogo.com/logos/nodejs-2.svg"/>
+<img width="45" height="45" hspace="10" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"/>
+<img width="45" height="45" hspace="10" src="https://www.vectorlogo.zone/logos/github/github-icon.svg"/>
+</p>
 
-## Available Scripts
+## Download and Usage :
+The code can be downloaded as a compressed `zip` file from the github web interface.
 
-In the project directory, you can run:
+The repository can also be cloned using:
+```
+git clone https://github.com/BarathKumarBK-15/Minesweeper.git
+```
 
-### `npm start`
+The game can be deployed locally after extraction by opening the folder in the terminal and running the code,
+```
+npm start
+```
+The above code opens the webpage on your defaulf browser. The page can also be opened on other browsers by opening the link,
+```
+http://localhost:3000
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Components of Project :
+- **JavaScript XML** files - 1
+- **CSS** files - 1
+- _Note: The above mentioned files are the important additional files added to the default React-App_
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## About the Webpage :
+The **game** is made upof just two pages which are actually `div` tags. The **main page** displays the actual **game screen** where the user is allowed to guess the tiles that are safe. The game is made in such a ways that most users will be able to crack the game, since it has a very **easy difficulty level**. There are just **15 mines** among the **100 grids**, leave a probablity of just 15%. Thus to spice up a bit, unlike the original game no tiles will be initally open in the beginning of the game. Thus, it leaves the user's first pick completely on **luck**. The user will be successful on recieveing a score of **85 points**.
 
-### `npm test`
+- **Game Screen** :
+  - It acts as the home page of the game, displaying a set of **10 x 10 grid matrix**.
+  - The user is free to pick any tile. Each tile, may or may not have a mine underneath it.
+  - The user **loses** the game, once the tile picked has a **mine underneath** it.
+  - The users can find theirselves successful by figuring out all the 85 safe tile.
+  - The page also contains the **score** being displayed below the matrix, which gets update instantly which **rendering**.
+  - On picking a safe tile, the user gets to know the number of mines in the adjacent tiles.
+  
+- **Result** :
+  - The result page is made upof two pages, either one of which will be displayed based on the outcome.
+  - The user on picking a tile with mine will be redirected to the game over page.
+  - The user on figuring out all the 85 safe tiles will be redirected to a game completed page.
+  - Both the pages display the final score and also provides the option to restart the game.
+  
+- **Graphical Features** :
+  - The project contains **multiple graphical content** ranging from _bending of borders_ to _styled fonts_, _contrasting colour switches_ and _eye-soothing layout_.
+  - The `CSS` file checks in all the requisites for empowerment of the graphical interface.
+  
+- **JavaScript** :
+  - The `JavaScript` plays the most significal role, driving the entire game.
+  - The **precise algorithm** of the game manages the flow controlling everything from **function calls** to **page switches** and **score calcutions**.
+  - The `algorithm` is built using simple `conditional statements`, `arrays`,`functions` and `classes`.
+  - The `algorithms` **efficiently** calculates the **number of mines in the valid neighbouring tile** .
+  - The `JavaScript` also maintains the **flow** between **page switches**.
+ 
+### Suggested Browsers for Deployment :
+-	Microsoft Edge
+-	Google Chrome
+- Safari
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Screenshots of the WebPage :
 
-### `npm run build`
+#### Gameplay
+<img width="900" alt="game1" src="https://user-images.githubusercontent.com/66675130/105609371-e580c600-5dce-11eb-8fa5-1b86971b249d.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Result
+<img width="900" alt="game1" src="https://user-images.githubusercontent.com/66675130/105609478-9b4c1480-5dcf-11eb-879e-64f647841e5b.png">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
