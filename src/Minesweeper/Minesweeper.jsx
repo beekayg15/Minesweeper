@@ -6,7 +6,7 @@ export default class Minesweeper extends React.Component
     constructor(props)
     {
         super(props);
-        this.state={array:[],tiles:[],score:[]};
+        this.state={array: [],tiles:[],score:[]};
     }
 
     componentDidMount() 
@@ -137,9 +137,9 @@ export default class Minesweeper extends React.Component
                 count+=checkmine(array,x8*10+y8);
             }
             st.innerHTML=count;
-            st.style.margin='2px';
+            st.style.margin='3px';
             st.style.background='green';
-            st.style.borderRadius='15px';
+            st.style.borderRadius='10px';
         }
     }
 
@@ -148,11 +148,12 @@ export default class Minesweeper extends React.Component
         const {array,tiles,score}=this.state;
         return(
             <div className="mine-container">
+                <h1>MINESWEEPER</h1>
                 <div id="GameOver">
                 <br></br>
                 <br></br>
                 <br></br>
-                {'OOPS:( GAME OVER'}
+                {'OOPS! GAME OVER'}
                 <br></br>
                 <br></br>
                 <br></br>
@@ -166,7 +167,7 @@ export default class Minesweeper extends React.Component
                 <br></br>
                 <br></br>
                 <br></br>
-                {'CONGRATS:) YOU HAVE WON THE GAME!!'}
+                {'CONGRATS! YOU HAVE WON THE GAME!!'}
                 <br></br>
                 <br></br>
                 <br></br>
